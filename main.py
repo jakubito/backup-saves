@@ -27,7 +27,8 @@ for entry in config['entries']:
     backup_dirs = entry['backup_dirs']
 
     if not os.path.isdir(source_dir):
-        raise NotADirectoryError(f'Source dir "{source_dir}" does not exist')
+        print(f'Skipping "{source_dir}"')
+        continue
 
     for backup_dir in backup_dirs:
         if not os.path.isdir(backup_dir):
@@ -42,6 +43,6 @@ for entry in config['entries']:
     
     for backup_dir in backup_dirs:
         shutil.copy(temp_backup_path, backup_dir)
-        print(f'{backup_name} copied to {backup_dir}')
+        print(f'{backup_name} copied to "{backup_dir}"')
 
     os.remove(temp_backup_path)
