@@ -1,0 +1,11 @@
+{
+  "entries": [
+    {
+      "name": "everdrive-gba",
+      "source_dir": "e:/GBASYS/save",
+      "backup_dirs": [
+        "c:/Users/dobes/Dropbox/GBA saves"
+      ]
+    }
+  ]
+}
