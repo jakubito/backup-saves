@@ -32,7 +32,7 @@ for entry in config['entries']:
 
     for backup_dir in backup_dirs:
         if not os.path.isdir(backup_dir):
-            raise NotADirectoryError(f'Backup dir "{source_dir}" does not exist')
+            raise NotADirectoryError(f'Backup dir "{backup_dir}" does not exist')
 
     timestamp = datetime.datetime.now(datetime.UTC).strftime('%Y%m%dT%H%M%SZ')
     backup_name = f'{name}-backup_{timestamp}'
